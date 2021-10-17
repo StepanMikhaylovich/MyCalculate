@@ -19,8 +19,8 @@ public class ArabianNumbers {
         int[] numbers = new int[str.length];
         for (int i = 0; i < str.length; i++){
             numbers[i] = Integer.parseInt(str[i]);
-            if (numbers[i] > 10){
-                throw new IOException("Введите число не больше 10");
+            if ((numbers[i] > 10) || (numbers[i] < 1)){
+                throw new IOException("Введите число не больше 10 и не меньше единицы");
             }
         }
         return numbers;
